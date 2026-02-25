@@ -101,7 +101,10 @@ export default function ChatPanel({
   // Auto-scroll when new messages arrive
   useEffect(() => {
     if (messages.length > lastMessageCountRef.current) {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+      // Small delay to ensure DOM has painted new messages
+      requestAnimationFrame(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+      });
     }
     lastMessageCountRef.current = messages.length;
   }, [messages.length]);
