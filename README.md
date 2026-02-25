@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WhatsApp CRM Demo
 
-## Getting Started
+Protótipo funcional de integração WhatsApp + CRM com **Inbox Omnichannel**, **Pipeline Kanban** e **Campanhas em massa**.
 
-First, run the development server:
+Demo para equipe de desenvolvimento usar como base arquitetural.
+
+## Stack
+
+- **Next.js 15** (App Router) + TypeScript
+- **Tailwind CSS 4**
+- **Prisma** + SQLite (zero config)
+- **@dnd-kit** (drag-and-drop no Kanban)
+- **WhatsApp simulado** (auto-respostas com delay realista)
+
+## Setup
 
 ```bash
+# Instalar dependências
+npm install
+
+# Gerar Prisma client + criar banco
+npx prisma generate
+npx prisma db push
+
+# Popular com dados de demonstração
+npx tsx prisma/seed.ts
+
+# Rodar dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Módulos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Inbox Omnichannel (`/inbox`)
+- Chat WhatsApp-like com bolhas, ticks de status
+- Lista de conversas com filtros (Abertos/Aguardando/Fechados)
+- **Auto-respostas simuladas** — envie uma mensagem e receba resposta em 2-5s
+- Painel de informações do contato
+- Picker de templates
 
-## Learn More
+### Pipeline Kanban (`/pipeline`)
+- 6 estágios: Novo Lead → Primeiro Contato → Qualificado → Proposta → Negociação → Fechado
+- **Drag-and-drop** para mover deals entre estágios
+- Cards com valor em R$, contato e tags
+- Totalizadores por coluna
 
-To learn more about Next.js, take a look at the following resources:
+### Campanhas (`/campaigns`)
+- Lista com status (Rascunho, Enviando, Concluída)
+- Wizard 4 etapas: Conteúdo → Audiência → Cadência → Revisão
+- **Simulação de disparo** — mensagens progridem (pending→sent→delivered→read→replied)
+- Barras de progresso em tempo real
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Contatos (`/contacts`)
+- 50 contatos com nomes brasileiros
+- Filtros: Todos/Ativos/Opt-out
+- Gestão de opt-out (compliance WhatsApp)
+- Tags coloridas, busca
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Dados de Demo
 
-## Deploy on Vercel
+O seed popula:
+- 50 contatos com telefones +55
+- 20 conversas com histórico de mensagens
+- 1 pipeline com 6 estágios e 30 deals
+- 3 campanhas (rascunho, rodando, concluída)
+- 10 templates aprovados
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Simulador WhatsApp
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O arquivo `src/lib/whatsapp-simulator.ts` contém o motor de auto-respostas:
+- Respostas contextuais baseadas em keywords (preço, demo, suporte, etc.)
+- Delay random de 2-5 segundos
+- Progressão de status: sent → delivered (1s) → read (3s)
+
+Para customizar respostas, edite o `RESPONSE_MAP` no arquivo.
