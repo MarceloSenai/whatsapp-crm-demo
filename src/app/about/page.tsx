@@ -122,7 +122,7 @@ export default function AboutPage() {
             <Layers className="h-5 w-5 text-[#25d366]" />
             Versões Disponíveis
           </h2>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-3">
             <div className="rounded-xl border-2 border-[#25d366] bg-white p-5 shadow-sm">
               <div className="mb-3 flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-black">
@@ -137,11 +137,11 @@ export default function AboutPage() {
                 <div className="flex justify-between"><span>Framework</span><span className="font-medium">Next.js 16</span></div>
                 <div className="flex justify-between"><span>ORM</span><span className="font-medium">Prisma 6</span></div>
                 <div className="flex justify-between"><span>UI</span><span className="font-medium">React + Tailwind</span></div>
-                <div className="flex justify-between"><span>Drag & Drop</span><span className="font-medium">@dnd-kit</span></div>
+                <div className="flex justify-between"><span>WhatsApp</span><span className="font-medium">Simulador</span></div>
               </div>
               <div className="flex gap-2">
                 <a href="https://whatsapp-crm-demo-1tqv.onrender.com" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-[#25d366] px-3 py-2 text-center text-xs font-medium text-white hover:bg-[#1da851]">Demo Live</a>
-                <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-gray-900 px-3 py-2 text-center text-xs font-medium text-white hover:bg-gray-800">GitHub TS</a>
+                <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-gray-900 px-3 py-2 text-center text-xs font-medium text-white hover:bg-gray-800">GitHub</a>
               </div>
             </div>
             <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -151,18 +151,39 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">C# / Blazor</h3>
-                  <span className="text-xs text-gray-400">ASP.NET Core + Blazor Server</span>
+                  <span className="text-xs text-gray-400">ASP.NET Core 9</span>
                 </div>
               </div>
               <div className="mb-4 space-y-1 text-sm text-gray-600">
-                <div className="flex justify-between"><span>Framework</span><span className="font-medium">ASP.NET Core 9</span></div>
+                <div className="flex justify-between"><span>Framework</span><span className="font-medium">Blazor Server</span></div>
                 <div className="flex justify-between"><span>ORM</span><span className="font-medium">EF Core 9</span></div>
-                <div className="flex justify-between"><span>UI</span><span className="font-medium">Blazor Server + Tailwind</span></div>
-                <div className="flex justify-between"><span>Pipeline</span><span className="font-medium">Dropdown Move</span></div>
+                <div className="flex justify-between"><span>UI</span><span className="font-medium">Blazor + Tailwind</span></div>
+                <div className="flex justify-between"><span>WhatsApp</span><span className="font-medium">Simulador</span></div>
               </div>
               <div className="flex gap-2">
-                <a href="https://whatsapp-crm-csharp.onrender.com" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-[#25d366] px-3 py-2 text-center text-xs font-medium text-white hover:bg-[#1da851]">Demo Live</a>
-                <a href="https://github.com/MarceloSenai/whatsapp-crm-demo-csharp" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-[#512bd4] px-3 py-2 text-center text-xs font-medium text-white hover:bg-[#3b1f9e]">GitHub C#</a>
+                <a href="https://whatsapp-crm-csharp.onrender.com" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-[#512bd4] px-3 py-2 text-center text-xs font-medium text-white hover:bg-[#3b1f9e]">Demo C#</a>
+                <a href="https://github.com/MarceloSenai/whatsapp-crm-demo-csharp" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-center text-xs font-medium text-gray-700 hover:bg-gray-50">GitHub</a>
+              </div>
+            </div>
+            <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#25d366]">
+                  <span className="text-sm font-bold text-white">Z</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">C# + Z-API</h3>
+                  <span className="text-xs text-gray-400">WhatsApp Real</span>
+                </div>
+              </div>
+              <div className="mb-4 space-y-1 text-sm text-gray-600">
+                <div className="flex justify-between"><span>Framework</span><span className="font-medium">Blazor Server</span></div>
+                <div className="flex justify-between"><span>ORM</span><span className="font-medium">EF Core 9</span></div>
+                <div className="flex justify-between"><span>UI</span><span className="font-medium">Blazor + Tailwind</span></div>
+                <div className="flex justify-between"><span>WhatsApp</span><span className="font-medium text-[#25d366]">Z-API (real)</span></div>
+              </div>
+              <div className="flex gap-2">
+                <a href="https://whatsapp-crm-zapi.onrender.com" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-[#25d366] px-3 py-2 text-center text-xs font-medium text-white hover:bg-[#1da851]">Demo Z-API</a>
+                <a href="https://github.com/MarceloSenai/whatsapp-crm-zapi" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg border border-[#25d366] px-3 py-2 text-center text-xs font-medium text-[#25d366] hover:bg-[#25d366]/5">GitHub</a>
               </div>
             </div>
           </div>
