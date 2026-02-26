@@ -140,6 +140,7 @@ export default function AboutPage() {
                 <div className="flex justify-between"><span>Drag & Drop</span><span className="font-medium">@dnd-kit</span></div>
               </div>
               <div className="flex gap-2">
+                <a href="https://whatsapp-crm-demo-1tqv.onrender.com" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-[#25d366] px-3 py-2 text-center text-xs font-medium text-white hover:bg-[#1da851]">Demo Live</a>
                 <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-gray-900 px-3 py-2 text-center text-xs font-medium text-white hover:bg-gray-800">GitHub TS</a>
               </div>
             </div>
@@ -160,6 +161,7 @@ export default function AboutPage() {
                 <div className="flex justify-between"><span>Pipeline</span><span className="font-medium">Dropdown Move</span></div>
               </div>
               <div className="flex gap-2">
+                <a href="https://whatsapp-crm-csharp.onrender.com" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-[#25d366] px-3 py-2 text-center text-xs font-medium text-white hover:bg-[#1da851]">Demo Live</a>
                 <a href="https://github.com/MarceloSenai/whatsapp-crm-demo-csharp" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-[#512bd4] px-3 py-2 text-center text-xs font-medium text-white hover:bg-[#3b1f9e]">GitHub C#</a>
               </div>
             </div>
