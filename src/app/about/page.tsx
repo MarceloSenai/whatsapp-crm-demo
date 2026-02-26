@@ -116,6 +116,56 @@ export default function AboutPage() {
           </div>
         </div>
 
+        {/* Versões */}
+        <section className="mb-10">
+          <h2 className="mb-4 flex items-center gap-2 text-xl font-bold text-gray-900">
+            <Layers className="h-5 w-5 text-[#25d366]" />
+            Versões Disponíveis
+          </h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-xl border-2 border-[#25d366] bg-white p-5 shadow-sm">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-black">
+                  <span className="text-sm font-bold text-white">TS</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">TypeScript</h3>
+                  <span className="rounded-full bg-[#25d366] px-1.5 py-0.5 text-[10px] text-white">Você está aqui</span>
+                </div>
+              </div>
+              <div className="mb-4 space-y-1 text-sm text-gray-600">
+                <div className="flex justify-between"><span>Framework</span><span className="font-medium">Next.js 16</span></div>
+                <div className="flex justify-between"><span>ORM</span><span className="font-medium">Prisma 6</span></div>
+                <div className="flex justify-between"><span>UI</span><span className="font-medium">React + Tailwind</span></div>
+                <div className="flex justify-between"><span>Drag & Drop</span><span className="font-medium">@dnd-kit</span></div>
+              </div>
+              <div className="flex gap-2">
+                <a href={REPO_URL} target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-gray-900 px-3 py-2 text-center text-xs font-medium text-white hover:bg-gray-800">GitHub TS</a>
+              </div>
+            </div>
+            <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+              <div className="mb-3 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#512bd4]">
+                  <span className="text-sm font-bold text-white">C#</span>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-gray-900">C# / Blazor</h3>
+                  <span className="text-xs text-gray-400">ASP.NET Core + Blazor Server</span>
+                </div>
+              </div>
+              <div className="mb-4 space-y-1 text-sm text-gray-600">
+                <div className="flex justify-between"><span>Framework</span><span className="font-medium">ASP.NET Core 10</span></div>
+                <div className="flex justify-between"><span>ORM</span><span className="font-medium">EF Core 10</span></div>
+                <div className="flex justify-between"><span>UI</span><span className="font-medium">Blazor Server + Tailwind</span></div>
+                <div className="flex justify-between"><span>Pipeline</span><span className="font-medium">Dropdown Move</span></div>
+              </div>
+              <div className="flex gap-2">
+                <a href="https://github.com/MarceloSenai/whatsapp-crm-demo-csharp" target="_blank" rel="noopener noreferrer" className="flex-1 rounded-lg bg-[#512bd4] px-3 py-2 text-center text-xs font-medium text-white hover:bg-[#3b1f9e]">GitHub C#</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Modules */}
         <section className="mb-10">
           <h2 className="mb-4 flex items-center gap-2 text-xl font-bold text-gray-900">
