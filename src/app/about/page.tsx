@@ -155,8 +155,8 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="mb-4 space-y-1 text-sm text-gray-600">
-                <div className="flex justify-between"><span>Framework</span><span className="font-medium">ASP.NET Core 10</span></div>
-                <div className="flex justify-between"><span>ORM</span><span className="font-medium">EF Core 10</span></div>
+                <div className="flex justify-between"><span>Framework</span><span className="font-medium">ASP.NET Core 9</span></div>
+                <div className="flex justify-between"><span>ORM</span><span className="font-medium">EF Core 9</span></div>
                 <div className="flex justify-between"><span>UI</span><span className="font-medium">Blazor Server + Tailwind</span></div>
                 <div className="flex justify-between"><span>Pipeline</span><span className="font-medium">Dropdown Move</span></div>
               </div>
