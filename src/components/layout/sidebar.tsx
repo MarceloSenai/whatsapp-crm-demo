@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { MessageSquare, Kanban, Megaphone, Users, Info, Github, Download, RotateCcw } from 'lucide-react';
+import { MessageSquare, Kanban, Megaphone, Users, Info, Github, Download, RotateCcw, BookOpen } from 'lucide-react';
 
 const navItems = [
   { href: '/inbox', label: 'Inbox', icon: MessageSquare },
@@ -11,6 +11,7 @@ const navItems = [
   { href: '/campaigns', label: 'Campanhas', icon: Megaphone },
   { href: '/contacts', label: 'Contatos', icon: Users },
   { href: '/about', label: 'Sobre', icon: Info },
+  { href: '/integration', label: 'Integração', icon: BookOpen },
 ];
 
 export default function Sidebar() {
